@@ -33,10 +33,6 @@ To try out the calculator, follow these simple steps:
 
 3. Explore the interactive calculator, toggle between Dark Mode and Light Mode, and enjoy the calculation history.
 
-## Preview
-
-Here's a preview of the calculator in action: [Calculator Demo](/assets/desktop_mobile_version.mp4).
-
 ## Future Endeavors
 
 This project is just the beginning of my journey in the world of software development. I'm excited to continue creating innovative solutions and sharing my progress with all of you. Stay tuned for more exciting projects!
@@ -46,6 +42,15 @@ This project is just the beginning of my journey in the world of software develo
 Thank you for taking the time to explore my work. If you have any questions, suggestions, or feedback, feel free to reach out to me on LinkedIn or through email at [ivanmartin_95@hotmail.com](mailto:ivanmartin_95@hotmail.com).
 
 Have a fantastic day and keep coding! 👨‍💻 💻
+
+## Preview
+
+Here's a preview of the calculator in action:
+
+<video controls width="100%">
+ <source src="/assets/desktop_mobile_version.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+</video>
 
 ---
 
