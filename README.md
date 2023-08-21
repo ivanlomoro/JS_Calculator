@@ -47,10 +47,11 @@ Have a fantastic day and keep coding! 👨‍💻 💻
 
 Here's a preview of the calculator in action:
 
-<video width="100%">
- <source src="/assets/desktop_mobile_version.gif" type="video/gif">
- Your browser does not support the video tag.
-</video>
+<table>
+  <tr>
+    <td><img src="./assets/desktop_mobile_version.gif" alt="Calculator previuw" width="400"/></td>
+  </tr>
+</table>
 
 ---
 
