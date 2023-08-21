@@ -1,0 +1,329 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    user-select: none;
+}
+
+.calculadora{
+    background-color: #e4e4e4;
+    color: black;
+    width: 350px;
+    max-width: 100%;
+    padding:1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:.5rem;
+}
+
+.pantalla{
+    grid-column: 1/-1;
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 5rem;
+    font-family: monospace;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.btn{
+    background-color: #d9d9d9;
+    color: black;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem;
+    cursor:pointer;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.btn:hover{
+    background-color: #f4f4f4;
+}
+
+#igual{
+    background-color: #62e64b;
+}
+
+#igual:hover{
+    background-color: hsl(111, 76%, 70%);
+}
+
+#signo{
+    background-color: orange;
+}
+
+#signo:hover{
+    background-color: rgb(255, 178, 34);
+}
+
+#ac{
+    background-color: #4f4f4f;
+    color: white;
+}
+
+#ac:hover{
+    background-color: #6a6a6a;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background-color: #6a6a6a;
+    border-radius: 3rem;
+    padding: 2.5px;
+    transition: 0.5s;
+  }
+  
+  .toggle-switch input[type="checkbox"] {
+    display: none;
+    background-color: #d9d9d9;
+  }
+  
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .toggle-text {
+    font-size: 24px;
+  }
+  
+  .toggle-text:first-child {
+    margin-right: 8px;
+  }
+  
+  input[type="checkbox"]:checked + .toggle-label .toggle-text:first-child {
+    opacity: 0;
+  }
+  
+  input[type="checkbox"]:checked + .toggle-label .toggle-text:last-child {
+    opacity: 1;
+  }
+  
+  input[type="checkbox"] + .toggle-label .toggle-text:first-child {
+    opacity: 1;
+  }
+  
+  input[type="checkbox"] + .toggle-label .toggle-text:last-child {
+    opacity: 0;
+  }
+  
+   .historial {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 400px;
+    max-height: 800px;
+    background-color: #e4e4e4;
+    color: black;
+    width: 350px;
+    max-width: 100%;
+    padding:1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: monospace;
+    padding-bottom: 50px;
+    }
+    
+
+  .historial h2{
+    margin-bottom: 1rem;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    font-family: monospace;
+    font-weight: 600;
+  }
+
+  .historial-lista {
+    flex-grow: 1;
+    overflow:auto;
+    margin-bottom: 1.5rem;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    font-family: monospace;
+    font-weight: 600;
+    padding-right: 2rem;
+}
+.historial-lista::-webkit-scrollbar {
+  width: 10px; 
+  height:30px;
+}
+
+.historial-lista::-webkit-scrollbar-track {
+  background: #e4e4e4; 
+  border-radius: 10px;
+}
+
+.historial-lista::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px; 
+}
+
+.historial-lista::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+  #listaHistorial {
+    list-style: none;
+}
+
+
+  #borrarHistorial{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      margin: 0;
+      padding: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid black;
+      box-shadow: 2px 2px 10px black;
+      color: black;
+      background-color: #62e64b;
+      font-family: monospace;
+      cursor: pointer;
+  }
+
+  #borrarHistorial:hover{
+    background-color: hsl(111, 76%, 70%);
+    transition: 0.5s;
+  }
+
+  body.dark-mode {
+    background-color: #4f4f4f;
+    color: #ffffff;
+  }
+  
+  .toggle-label.dark-mode{
+    background-color: #d9d9d9;
+    border-radius: 1rem;
+  }
+
+  .calculadora.dark-mode {
+    background-color: #222222;
+  }
+  
+  .pantalla.dark-mode {
+    background-color: #d9d9d9;
+  }
+
+  .btn.dark-mode{
+    background-color: #4f4f4f;
+    color: #f4f4f4;
+  }
+
+  .btn.dark-mode:hover{
+    background-color: #6a6a6a;;
+  }
+
+  #ac.btn.dark-mode{
+    background-color: #9a86fd;
+    color: #f4f4f4;
+  }
+
+  #ac.btn.dark-mode:hover{
+    background-color: #a896ff;
+  }
+
+  #signo.btn.dark-mode{
+    background-color: rgb(0, 255, 0);
+  }
+
+  #signo.btn.dark-mode:hover{
+    background-color: rgb(163, 255, 163);
+  }
+  
+  #igual.btn.dark-mode{
+   background-color:  rgb(170, 0, 255);
+  }
+
+  #igual.btn.dark-mode:hover{
+    background-color:  rgb(191, 64, 255);
+   }
+
+  .historial.dark-mode {
+    background-color: #222222;
+  }
+  
+  .historial-lista.dark-mode {
+    background-color: #d9d9d9;
+  }
+
+ .tittle.dark-mode{
+    background-color: #d9d9d9;
+  }
+
+  #borrarHistorial.dark-mode{
+    background-color:  rgb(170, 0, 255);
+    color: #f4f4f4;
+   }
+ 
+   #borrarHistorial.dark-mode:hover{
+     background-color:  rgb(191, 64, 255);
+    }
+
+    @media screen and (max-width: 768px)  {
+      body {
+        grid-template-areas:
+          "calculadora"
+          "historial";
+        grid-template-columns: 1fr;
+        transition: all 0.3s ease;
+        margin: 1rem;
+      }
+
+      .calculadora{
+        order:1;
+        margin: 1rem;
+      }
+
+      .historial{
+        order:2;
+      }
+    }
+    
+
+    @media screen and (max-width: 480px) {
+      body {
+        margin: 0.5rem;
+      }
+  
+      .calculadora,
+      .historial {
+        width: 100%;
+        max-width: none;
+      }
+  } 
+
+
+    
